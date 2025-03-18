@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with CSS Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            text-align: center;
+        }
+
+        /* Keyframes for text animation */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Heading with animation */
+        h1 {
+            font-size: 48px;
+            color: #007acc;
+            margin-bottom: 20px;
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        /* Subheading with delay animation */
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 40px;
+            animation: slideIn 2s ease-out 0.5s forwards;
+        }
+
+        /* Circle element with rotating animation */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #007acc;
+            border-radius: 50%;
+            animation: rotate 5s infinite linear;
+        }
+
+        /* Button with hover effect */
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <h2>Sign in to start</h2>
+        <div class="Circle"></div>
+        <h2>Continue with Meta</h2>
+        <button class="btn">Haven't account? Sign up!</button>
+    </div>
+
+</body>
+</html>

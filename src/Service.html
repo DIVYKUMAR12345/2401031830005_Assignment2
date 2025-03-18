@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Comic Strip Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .description {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+        .ideas {
+            margin-top: 20px;
+        }
+        .idea {
+            background: #e2e2e2;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Digital Comic Strip Creator</h1>
+</header>
+
+<div class="container">
+    <div class="description">
+        <h2>Create and Share Your Own Digital Comic Strips!</h2>
+        <p>Welcome to the Digital Comic Strip Creator! This platform allows you to unleash your creativity by designing and sharing your own comic strips. Whether you're a seasoned artist or just starting out, our tools make it easy to bring your stories to life.</p>
+    </div>
+
+    <form id="comicForm">
+        <h3>Submit Your Comic Strip Idea</h3>
+        <input type="text" id="title" placeholder="Comic Title" required>
+        <textarea id="description" rows="4" placeholder="Describe your comic strip idea..." required></textarea>
+        <input type="submit" value="Submit Idea">
+    </form>
+
+    <div class="ideas" id="ideasList">
+        <h3>Submitted Ideas</h3>
+    </div>
+</div>
+
+<script>
+    document.getElementById('comicForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const title = document.getElementById('title').value;
+        const description = document.getElementById('description').value;
+
+        const ideasList = document.getElementById('ideasList');
+        const ideaDiv = document.createElement('div');
+        ideaDiv.classList.add('idea');
+        ideaDiv.innerHTML = `<strong>${title}</strong><p>${description}</p>`;
+        
+        ideasList.appendChild(ideaDiv);
+
+        // Clear the form
+        document.getElementById('comicForm').reset();
+    });
+</script>
+
+</body>
+</html>

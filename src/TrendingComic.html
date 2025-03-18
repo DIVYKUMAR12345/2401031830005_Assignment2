@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Comics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #FF9A9E 0%, #FAD0C4 100%);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 360px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        .header, .comics, .readers {
+            margin-bottom: 20px;
+        }
+        .comic, .reader {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .continue-reading {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Stay trending!</h2>
+        <p>DIVYkUMAR PATEL</p>
+    </div>
+    
+    <div class="comics">
+        <h3>Trending Comic</h3>
+        <div id="comic-list"></div>
+    </div>
+
+    <div class="readers">
+        <h3>Top Readers</h3>
+        <div id="reader-list"></div>
+    </div>
+
+    <div class="continue-reading">
+        <div>Evangelion</div>
+        <div>Chapter 89</div>
+        <button onclick="continueReading()">▶</button>
+    </div>
+</div>
+
+<script>
+    const comics = [
+        { title: "Evangelion", source: "MangaLib" },
+        { title: "Re-zero: Second", source: "MangaPoisk" },
+        { title: "JoJo's Bizarre Adventure", source: "Valve" }
+    ];
+
+    const topReaders = ['nayan_p', 'suman_s', 'shyam_p', 'arya_p', 'krish_p'];
+
+    function displayComics() {
+        const comicList = document.getElementById('comic-list');
+        comicList.innerHTML = '';
+        for (let i = 0; i < comics.length; i++) {
+            comicList.innerHTML += `
+                <div class="comic">
+                    <strong>${comics[i].title}</strong>
+                    <span>From ${comics[i].source}</span>
+                </div>
+            `;
+        }
+    }
+
+    function displayReaders() {
+        const readerList = document.getElementById('reader-list');
+        readerList.innerHTML = '';
+        for (let reader of topReaders) {
+            readerList.innerHTML += `
+                <div class="reader">${reader}</div>
+            `;
+        }
+    }
+
+    function continueReading() {
+        alert('Continuing to read Evangelion, Chapter 89!');
+    }
+
+    // Initialize display
+    displayComics();
+    displayReaders();
+
+</script>
+
+</body>
+</html>

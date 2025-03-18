@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Mobile App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f3ff;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .search-bar {
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .trending {
+            margin-top: 20px;
+        }
+        .manga-card {
+            display: flex;
+            padding: 10px;
+            border-radius: 10px;
+            background: white;
+            margin-bottom: 10px;
+        }
+        .manga-card img {
+            width: 60px;
+            height: 80px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .top-readers {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .continue-reading {
+            background: #e2e2ff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .genres {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .genre {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            flex: 1 1 48%;
+            text-align: center;
+        }
+        .continue-button {
+            background: #5c7cfa;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            .manga-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .manga-card img {
+                margin: 0 0 10px 0;
+            }
+            .continue-reading {
+                font-size: 14px;
+            }
+            .genres {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .search-bar {
+                padding: 8px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <img src="C:\Users\PATEL DIVYKUMAR\Downloads\WhatsApp Image 2025-02-16 at 7.03.55 PM.jpeg" alt="Profile Picture">
+                <span>Divykumar Patel</span>
+            </div>
+            <input type="text" class="search-bar" placeholder="Search Comic...">
+        </div>
+        <div class="trending">
+            <h2>Trending Comic</h2>
+            <div class="manga-card">
+                <img src="C:\Users\PATEL DIVYKUMAR\Pictures\Saved Pictures\Evangelion.jpg" alt="Evangelion">
+                <div>
+                    <h3>Evangelion</h3>
+                    <span>From ComicLib</span>
+                </div>
+            </div>
+            <div class="manga-card">
+                <img src="C:\Users\PATEL DIVYKUMAR\Pictures\Saved Pictures\Re-zero.jpg" alt="Re:Zero">
+                <div>
+                    <h3>Re:Zero: Second</h3>
+                    <span>From ComicPoisk</span>
+                </div>
+            </div>
+            <div class="manga-card">
+                <img src="C:\Users\PATEL DIVYKUMAR\Pictures\Saved Pictures\Jojo's Bizarre Adventure.jpg" alt="Jojo's Bizarre Adventure">
+                <div>
+                    <h3>Jojo's Bizarre Adventure</h3>
+                    <span>From Valvet</span>
+                </div>
+            </div>
+        </div>
+        <div class="top-readers">
+            <h2>Top Readers</h2>
+            <span>See All</span>
+        </div>
+        <div class="continue-reading">
+            <h3>Continue Reading</h3>
+            <p>Evangelion</p>
+            <p>Chapter 89</p>
+        </div>
+        <div class="genres">
+            <div class="genre">Romance</div>
+            <div class="genre">Drama</div>
+            <div class="genre">Fantasy</div>
+            <div class="genre">Mystery</div>
+            <div class="genre">Comedy</div>
+            <div class="genre">Adventer</div>
+        </div>
+        <div class="continue-button">Continue</div>
+    </div>
+</body>
+</html>

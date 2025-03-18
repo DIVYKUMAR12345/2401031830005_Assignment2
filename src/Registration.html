@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #1877F2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .meta-button {
+            background-color: #4267B2;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 12px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome</h2>
+    <p>Sign in to start</p>
+
+    <button class="button">
+        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16"><path d="M15.88 8.65c0-.57-.05-1.1-.15-1.6H8v3h4.41c-.18 1.05-.76 2.4-2.58 2.9v3.88c3.64-2.08 5.47-5.69 5.47-8.18z"/><path d="M8 0C3.58 0 0 3.58 0 8c0 4.42 3.58 8 8 8 4.42 0 8-3.58 8-8 0-4.42-3.58-8-8-8zm1 12.4H6.4V8.6H2.6V6h3.8V4h2.4v2.6h3.8v2.6h-3.8v4.4z"/></svg>
+        Continue with Google
+    </button>
+
+    <button class="button meta-button">
+        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"><path d="M8 0A8 8 0 0 0 0 8a8 8 0 0 0 8 8a8 8 0 0 0 8-8A8 8 0 0 0 8 0zm4 7h-3V5c0-.45.3-.9.85-.9H12V2.5c-.71-.1-1.82-.2-2.9-.2c-2.68 0-4.5 1.52-4.5 4.5V7H5v2h1.6v6h2V9h2.4l.4-2z"/></svg>
+        Continue with Meta
+    </button>
+
+    <p>Have account? <a href="#">Sign in!</a></p>
+
+    <input type="text" placeholder="Username" required autocomplete="off">
+    <input type="password" placeholder="Password" required autocomplete="off">
+    
+    <a href="#">forgot password?</a>
+    
+    <button class="button">Continue</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form with Semantic Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f3ff;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f0f3ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        article {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> | 
+        <a href="FirstHome.html">FirstHome</a> |
+        <a href="Registration.html">Registration</a> |
+        <a href="AnimatedSignUp.html">AnimatedSignUp</a> |
+        <a href="LetUsNow1.html">LetUsNow1</a> |
+        <a href="LetUsNow2.html">LetUsNow2</a> |
+        <a href="TrendingComic.html">TrendingComic</a> |
+        <a href="TrendingComicBook.html">TrendingComicBook</a> | 
+        <a href="ContactUsAboutUs.html">ContactUsAboutUs</a> | 
+        <a href="Service.html">Service</a>  
+
+    </nav>
+
+    <article>
+        <h2>Sign Up Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

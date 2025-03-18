@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre Selection Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #modal {
+            display: none;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #modal h2 {
+            text-align: center;
+        }
+        .emoji {
+            font-size: 30px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="modal">
+    <h2>Let Us Know!</h2>
+    <p>Choose your genre to find favorite titles here!</p>
+    <div id="emojis">
+        <span class="emoji">🔥</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">😄</span>
+        <span class="emoji">🦄</span>
+        <span class="emoji">📸</span>
+        <span class="emoji">😆</span>
+        <span class="emoji">🧠</span>
+        <span class="emoji">✈️</span>
+        <span class="emoji">😃</span>
+    </div>
+    <div id="buttons">
+        <button id="continue">Continue</button>
+        <button id="skip">Skip for now</button>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Show the modal when the page loads
+    $("#modal").fadeIn();
+
+    // Animate emojis on mouse hover
+    $(".emoji").hover(
+        function() {
+            $(this).stop().animate({ fontSize: "50px" }, 200);
+        },
+        function() {
+            $(this).stop().animate({ fontSize: "30px" }, 200);
+        }
+    );
+
+    // Slide effect for buttons
+    $("#continue").click(function() {
+        alert("Continue clicked!");
+    });
+
+    $("#skip").click(function() {
+        $("#modal").slideUp();
+    });
+});
+</script>
+
+</body>
+</html>
+</html>
